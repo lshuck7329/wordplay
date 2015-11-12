@@ -10,11 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nounTextfield: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
         
     }
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nounSender = segue.destinationViewController as! madLibViewController
+        nounSender.noun = nounTextfield.text!
+    }
+    
+    @IBAction func nounNextButton(sender: AnyObject) {
+        
+    }
 }
 

@@ -10,11 +10,19 @@ import UIKit
 
 class adjectiveViewController: UIViewController {
 
+    @IBOutlet weak var adjectiveTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Enter An Adjective"
 
     }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let adjectiveSender = segue.destinationViewController as! madLibViewController
+        adjectiveSender.adjective = adjectiveTextfield.text!
+    }
 
+    @IBAction func adjectiveNextButton(sender: AnyObject) {
+        
+    }
     
 }

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Enter A Noun-->
@@ -26,28 +25,32 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="nounNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="847-vm-xVs"/>
                                     <segue destination="tCw-MV-BH8" kind="show" id="6M9-Af-Myt"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Noun Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAQ-9f-oOu">
                                 <rect key="frame" x="239" y="72" width="122" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="Wv6-46-Gma"/>
-                                    <constraint firstAttribute="height" constant="30" id="rB8-WY-11p"/>
+                                    <constraint firstAttribute="height" constant="30" id="R2B-Jp-BGW"/>
+                                    <constraint firstAttribute="width" constant="122" id="fkl-x1-HE9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.885061553" green="0.5509412145" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="w0N-7N-wpF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ACn-mr-4Wb"/>
-                            <constraint firstItem="vAQ-9f-oOu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="J1T-Qd-uUL"/>
-                            <constraint firstItem="vAQ-9f-oOu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="219" id="bkF-1l-fjz"/>
+                            <constraint firstItem="vAQ-9f-oOu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GeR-c9-dFE"/>
+                            <constraint firstItem="vAQ-9f-oOu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="huY-96-hbq"/>
                             <constraint firstItem="w0N-7N-wpF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="riO-jJ-7KM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Enter A Noun" id="RXJ-iz-xeE"/>
+                    <connections>
+                        <outlet property="nounTextfield" destination="vAQ-9f-oOu" id="iab-Tt-oIe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -76,24 +79,28 @@
                                     <segue destination="QUV-Bs-c7x" kind="show" id="tbZ-Yh-prs"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZc-Ub-Wwl">
-                                <rect key="frame" x="252" y="72" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Verb Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZc-Ub-Wwl">
+                                <rect key="frame" x="242" y="72" width="117" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="Gm0-Qp-fsj"/>
-                                    <constraint firstAttribute="height" constant="30" id="k4D-nl-2Sp"/>
+                                    <constraint firstAttribute="height" constant="30" id="YrH-BX-nfD"/>
+                                    <constraint firstAttribute="width" constant="117" id="wuJ-UW-fCb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.885061553" green="0.5509412145" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="JZc-Ub-Wwl" firstAttribute="top" secondItem="ZDl-W2-D0B" secondAttribute="bottom" constant="8" id="1gW-Bp-Usy"/>
                             <constraint firstItem="jNd-FS-01w" firstAttribute="centerY" secondItem="zG8-fi-XEh" secondAttribute="centerY" id="2Ul-A7-sij"/>
-                            <constraint firstItem="JZc-Ub-Wwl" firstAttribute="leading" secondItem="zG8-fi-XEh" secondAttribute="leadingMargin" constant="232" id="HI7-Pl-EJx"/>
+                            <constraint firstItem="JZc-Ub-Wwl" firstAttribute="top" secondItem="ZDl-W2-D0B" secondAttribute="bottom" constant="8" id="7CS-Yc-o3E"/>
+                            <constraint firstItem="JZc-Ub-Wwl" firstAttribute="centerX" secondItem="zG8-fi-XEh" secondAttribute="centerX" id="T95-Yj-das"/>
                             <constraint firstItem="jNd-FS-01w" firstAttribute="centerX" secondItem="zG8-fi-XEh" secondAttribute="centerX" id="bpg-yI-RFq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="verbNextButton" destination="jNd-FS-01w" id="w3k-Dq-mgV"/>
+                        <outlet property="verbTextfield" destination="JZc-Ub-Wwl" id="zrR-JG-XpW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uN1-5S-mv0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,27 +126,31 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="adjectiveNextButton:" destination="QUV-Bs-c7x" eventType="touchUpInside" id="ap8-qq-En7"/>
                                     <segue destination="dOH-hj-ang" kind="show" id="WDb-jK-vLe"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D7f-Bl-x6D">
-                                <rect key="frame" x="252" y="72" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Adjective Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D7f-Bl-x6D">
+                                <rect key="frame" x="226" y="72" width="148" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="Ffb-Ec-n3O"/>
-                                    <constraint firstAttribute="height" constant="30" id="JJc-m9-MTQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="B2H-tJ-ypO"/>
+                                    <constraint firstAttribute="width" constant="148" id="q51-28-ZLd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.885061553" green="0.5509412145" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="EWj-TT-S1s" firstAttribute="centerX" secondItem="zLh-vX-vDV" secondAttribute="centerX" id="ELh-oJ-TaD"/>
-                            <constraint firstItem="D7f-Bl-x6D" firstAttribute="top" secondItem="v2t-Lz-mDA" secondAttribute="bottom" constant="8" id="Lih-de-twO"/>
                             <constraint firstItem="EWj-TT-S1s" firstAttribute="centerY" secondItem="zLh-vX-vDV" secondAttribute="centerY" id="eAA-8q-JvH"/>
-                            <constraint firstItem="D7f-Bl-x6D" firstAttribute="leading" secondItem="zLh-vX-vDV" secondAttribute="leadingMargin" constant="232" id="w60-OB-Suf"/>
+                            <constraint firstItem="D7f-Bl-x6D" firstAttribute="centerX" secondItem="zLh-vX-vDV" secondAttribute="centerX" id="kKY-NR-lXA"/>
+                            <constraint firstItem="D7f-Bl-x6D" firstAttribute="top" secondItem="v2t-Lz-mDA" secondAttribute="bottom" constant="8" id="rZH-P9-ahx"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adjectiveTextfield" destination="D7f-Bl-x6D" id="QeO-nt-0xg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKz-y1-TZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,8 +167,27 @@
                     <view key="view" contentMode="scaleToFill" id="tgP-Nj-ktn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm1-s8-YN6">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1oH-rp-AKe"/>
+                                    <constraint firstAttribute="width" constant="42" id="oiA-ya-ka0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.885061553" green="0.5509412145" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dm1-s8-YN6" firstAttribute="centerX" secondItem="tgP-Nj-ktn" secondAttribute="centerX" id="L7u-6A-9Xt"/>
+                            <constraint firstItem="Dm1-s8-YN6" firstAttribute="centerY" secondItem="tgP-Nj-ktn" secondAttribute="centerY" id="nq0-eh-mcr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="finalSentence" destination="Dm1-s8-YN6" id="JCV-ai-1DQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gba-8n-v2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
