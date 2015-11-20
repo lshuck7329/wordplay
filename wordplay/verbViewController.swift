@@ -15,14 +15,19 @@ class verbViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Enter A Verb"
-
+        
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let verbSender = segue.destinationViewController as! madLibViewController
-        verbSender.verb = verbTextfield.text!
-    }
-
     
-    @IBOutlet weak var verbNextButton: UIButton!
+    @IBAction func verbNextButton(sender: AnyObject) {
+        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "madLibViewController" {
+                let verbSender = segue.destinationViewController as! madLibViewController
+                verbSender.verb = verbTextfield.text!
+            }
+    }
+
+    }
+    
+ 
     
 }

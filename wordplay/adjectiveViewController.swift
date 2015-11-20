@@ -16,13 +16,15 @@ class adjectiveViewController: UIViewController {
         self.title = "Enter An Adjective"
 
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let adjectiveSender = segue.destinationViewController as! madLibViewController
-        adjectiveSender.adjective = adjectiveTextfield.text!
-    }
 
     @IBAction func adjectiveNextButton(sender: AnyObject) {
-        
+            func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+                if segue.identifier == "madLibViewController" {
+                    let adjectiveSender = segue.destinationViewController as! madLibViewController
+                    adjectiveSender.adjective = adjectiveTextfield.text!
+                }
+    }
+
     }
     
 }

@@ -19,6 +19,9 @@ class madLibViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Final Mad Lib"
         finalSentence.text = "The" + adjective + noun + verb
+        
+        
+        
     }
 
         

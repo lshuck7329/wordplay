@@ -76,6 +76,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
+                                    <action selector="verbNextButton:" destination="tCw-MV-BH8" eventType="touchUpInside" id="xhG-dP-o3x"/>
                                     <segue destination="QUV-Bs-c7x" kind="show" id="tbZ-Yh-prs"/>
                                 </connections>
                             </button>
@@ -98,7 +99,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="verbNextButton" destination="jNd-FS-01w" id="w3k-Dq-mgV"/>
                         <outlet property="verbTextfield" destination="JZc-Ub-Wwl" id="zrR-JG-XpW"/>
                     </connections>
                 </viewController>
