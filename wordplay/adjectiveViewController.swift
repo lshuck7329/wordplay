@@ -21,7 +21,7 @@ class adjectiveViewController: UIViewController {
             func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
                 if segue.identifier == "madLibViewController" {
                     let adjectiveSender = segue.destinationViewController as! madLibViewController
-                    adjectiveSender.adjective = adjectiveTextfield.text!
+                    adjectiveSender.inputs = adjectiveTextfield.text!
                 }
     }
 

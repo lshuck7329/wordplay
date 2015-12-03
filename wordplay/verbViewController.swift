@@ -22,7 +22,7 @@ class verbViewController: UIViewController {
         func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if segue.identifier == "madLibViewController" {
                 let verbSender = segue.destinationViewController as! madLibViewController
-                verbSender.verb = verbTextfield.text!
+                verbSender.inputs = verbTextfield.text!
             }
     }
 

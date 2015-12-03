@@ -11,14 +11,13 @@ import UIKit
 class madLibViewController: UIViewController {
     
     @IBOutlet weak var finalSentence: UILabel!
-    var noun: String = ""
-    var verb: String = ""
-    var adjective: String = ""
+    
+    var inputs = words()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Final Mad Lib"
-        finalSentence.text = "The" + adjective + noun + verb
+        finalSentence.text = "The" + "\(inputs.adjective)" + "\(inputs.noun)" + "\(inputs.verb)"
         
         
         

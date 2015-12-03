@@ -9,9 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-   
     @IBOutlet weak var nounTextfield: UITextField!
+
+    var theWords = words(Noun: "", Verb: "", Adjective: "")
     
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,7 +24,8 @@ class ViewController: UIViewController {
             func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
                 if segue.identifier == "madLibViewController" {
                     let nounSender = segue.destinationViewController as! madLibViewController
-                    nounSender.noun = nounTextfield.text!
+                    nounSender.inputs = theWords
+                    
                 }
         
     }
