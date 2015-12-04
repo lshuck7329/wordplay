@@ -18,13 +18,11 @@ class verbViewController: UIViewController {
         
     }
     
-    @IBAction func verbNextButton(sender: AnyObject) {
-        func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if segue.identifier == "madLibViewController" {
                 let verbSender = segue.destinationViewController as! madLibViewController
                 verbSender.inputs = verbTextfield.text!
             }
-    }
 
     }
     

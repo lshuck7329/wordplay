@@ -17,13 +17,11 @@ class adjectiveViewController: UIViewController {
 
     }
 
-    @IBAction func adjectiveNextButton(sender: AnyObject) {
-            func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
                 if segue.identifier == "madLibViewController" {
                     let adjectiveSender = segue.destinationViewController as! madLibViewController
                     adjectiveSender.inputs = adjectiveTextfield.text!
                 }
-    }
 
     }
     
