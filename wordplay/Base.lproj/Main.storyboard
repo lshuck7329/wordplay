@@ -25,7 +25,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="nounNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="847-vm-xVs"/>
+                                    <action selector="nounButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RXn-ES-Sjf"/>
                                     <segue destination="tCw-MV-BH8" kind="show" id="6M9-Af-Myt"/>
                                 </connections>
                             </button>
@@ -76,7 +76,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="verbNextButton:" destination="tCw-MV-BH8" eventType="touchUpInside" id="xhG-dP-o3x"/>
+                                    <action selector="verbButton:" destination="tCw-MV-BH8" eventType="touchUpInside" id="Vu3-HF-CSo"/>
                                     <segue destination="QUV-Bs-c7x" kind="show" id="tbZ-Yh-prs"/>
                                 </connections>
                             </button>
@@ -126,7 +126,7 @@
                                 </constraints>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="adjectiveNextButton:" destination="QUV-Bs-c7x" eventType="touchUpInside" id="ap8-qq-En7"/>
+                                    <action selector="adjectiveButton:" destination="QUV-Bs-c7x" eventType="touchUpInside" id="8c3-82-AKh"/>
                                     <segue destination="dOH-hj-ang" kind="show" id="WDb-jK-vLe"/>
                                 </connections>
                             </button>
@@ -168,11 +168,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm1-s8-YN6">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dm1-s8-YN6">
+                                <rect key="frame" x="20" y="289" width="560" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="1oH-rp-AKe"/>
-                                    <constraint firstAttribute="width" constant="42" id="oiA-ya-ka0"/>
+                                    <constraint firstAttribute="width" constant="560" id="ffi-Jj-wJR"/>
+                                    <constraint firstAttribute="height" constant="21" id="t3x-HI-uv0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,8 +181,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.885061553" green="0.5509412145" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Dm1-s8-YN6" firstAttribute="centerX" secondItem="tgP-Nj-ktn" secondAttribute="centerX" id="L7u-6A-9Xt"/>
-                            <constraint firstItem="Dm1-s8-YN6" firstAttribute="centerY" secondItem="tgP-Nj-ktn" secondAttribute="centerY" id="nq0-eh-mcr"/>
+                            <constraint firstItem="Dm1-s8-YN6" firstAttribute="centerX" secondItem="tgP-Nj-ktn" secondAttribute="centerX" id="4OD-gy-jJu"/>
+                            <constraint firstItem="Dm1-s8-YN6" firstAttribute="centerY" secondItem="tgP-Nj-ktn" secondAttribute="centerY" id="x58-0i-TvL"/>
                         </constraints>
                     </view>
                     <connections>

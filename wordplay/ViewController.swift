@@ -11,22 +11,37 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var nounTextfield: UITextField!
 
+        var words1 = words(noun: "", verb: "", adjective: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var theNoun: String = (nounTextfield.text)!
+        self.title = "Enter A Noun"
         
-        var theWordNoun = words(Noun: theNoun)
-
     }
     
-            override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-                if segue.identifier == "madLibViewController" {
-                    let nounSender = segue.destinationViewController as! madLibViewController
-                    nounSender.inputs = theWordNoun
-                    
-                }
+    @IBAction func nounButton(sender: AnyObject)
+    {
+        words1.noun = nounTextfield.text!
         
+        if (nounTextfield.text!.isEmpty)
+        {
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+            alert.title = "There Is No Text"
+            alert.message = "Please Enter Text Above"
 
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(defaultAction)
+            
+            presentViewController(alert, animated: true, completion: nil)
+        }
     }
+
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nounSender = segue.destinationViewController as! verbViewController
+        nounSender.words2 = words1
+                
+                    
+    }
+
 }

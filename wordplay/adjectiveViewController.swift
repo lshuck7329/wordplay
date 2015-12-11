@@ -10,6 +10,8 @@ import UIKit
 
 class adjectiveViewController: UIViewController {
 
+    var words3 = words(noun: "", verb: "", adjective: "")
+    
     @IBOutlet weak var adjectiveTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,12 +19,24 @@ class adjectiveViewController: UIViewController {
 
     }
 
-            override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-                if segue.identifier == "madLibViewController" {
-                    let adjectiveSender = segue.destinationViewController as! madLibViewController
-                    adjectiveSender.inputs = adjectiveTextfield.text!
-                }
+    @IBAction func adjectiveButton(sender: AnyObject) {
+        words3.adjective = adjectiveTextfield.text!
+        
+        if (adjectiveTextfield.text!.isEmpty)
+        {
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+            alert.title = "There Is No Text"
+            alert.message = "Please Enter Text Above"
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(defaultAction)
+            
+            presentViewController(alert, animated: true, completion: nil)
+        }
 
     }
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let adjectiveSender = segue.destinationViewController as! madLibViewController
+        adjectiveSender.inputs = words3
+    }
 }

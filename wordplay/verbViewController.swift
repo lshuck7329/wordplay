@@ -12,20 +12,33 @@ class verbViewController: UIViewController {
 
     @IBOutlet weak var verbTextfield: UITextField!
     
+    var words2 = words(noun: "", verb: "", adjective: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Enter A Verb"
         
     }
     
-        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-            if segue.identifier == "madLibViewController" {
-                let verbSender = segue.destinationViewController as! madLibViewController
-                verbSender.inputs = verbTextfield.text!
-            }
+    @IBAction func verbButton(sender: AnyObject) {
+        words2.verb = verbTextfield.text!
+        
+        if (verbTextfield.text!.isEmpty)
+        {
+            let alert = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+            alert.title = "There Is No Text"
+            alert.message = "Please Enter Text Above"
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            alert.addAction(defaultAction)
+            
+            presentViewController(alert, animated: true, completion: nil)
+        }
 
     }
-    
- 
-    
+
+        override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+                let verbSender = segue.destinationViewController as! adjectiveViewController
+                verbSender.words3 = words2
+        }
 }

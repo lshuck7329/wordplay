@@ -13,7 +13,7 @@ class words {
     var verb: String = ""
     var adjective: String = ""
 
-init (Noun n: String, Verb v: String, Adjective a: String) {
+init (noun n: String, verb v: String, adjective a: String) {
     noun = n
     verb = v
     adjective = a
